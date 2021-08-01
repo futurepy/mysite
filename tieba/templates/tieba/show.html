@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>展示页</title>
+</head>
+<body>
+<h3 align="center">展示页</h3>
+    <table align="center" border="1">
+    <tr>
+        <th style="color:red;font-size:20px;background-color:blue">id</th>
+        <th style="color:red;font-size:20px;background-color:blue">吧名</th>
+        <th style="color:red;font-size:20px;background-color:blue">关注量</th>
+        <th style="color:red;font-size:20px;background-color:blue">发帖数</th>
+    </tr>
+{% for line in list %}
+    <tr>
+        <td>{{line.id}}</td>
+        <td>{{line.baming}}</td>
+        <td>{{line.guanzhuliang}}</td>
+        <td>{{line.fatieshu}}</td>
+    </tr>
+{% endfor %}
+    </table>
+</body>
+</html>

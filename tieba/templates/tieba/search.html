@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>查询页</title>
+    <script>
+	function openResult(){    /* 绑定事件 */
+		var r = confirm("查询成功!")
+		if (r == true) {
+		//window.location.href="F:\MyPythonWorkSpace\pc\pc\django_web\templates\show.html"
+		} else {
+
+		}
+	}
+    </script>
+</head>
+<body>
+    <h3 align="center">搜索页面</h3>
+    <form action="/search/" method="post"> {% csrf_token %}
+        <table align="center">
+            <tr>
+                <td align="center">输入吧名：</td>
+                <td><input type="text" name="search" placeholder="请输入吧名，之间以空格隔开"></td>
+            </tr>
+            <tr>
+                <td align="center">邮箱地址：</td>
+                <td><input type="text" name="pn" id="pnum" placeholder="请输入163邮箱地址前缀" onblur="check()">
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="submit" value="搜索" onclick="openResult()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
